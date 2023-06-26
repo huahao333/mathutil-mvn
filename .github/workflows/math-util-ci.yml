@@ -36,5 +36,5 @@ jobs:
     - name: Make hyperlink to jar-war file # Tạo hyperlink để download build 
       uses: actions/upload-artifact@v1
       with:
-        name: math-util.jar # Bản build được nén thành .zip 
+        name: math-util.zip # Bản build được nén thành .zip 
         path: staging
