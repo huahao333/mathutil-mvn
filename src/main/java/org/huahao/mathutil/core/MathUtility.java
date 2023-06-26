@@ -17,7 +17,7 @@ public class MathUtility {
     //gài rằng buộc đầu vào cho hàm method
     //không chấp nhận n > 20
     public static final double PI = 3.1415; 
-    public static long getFactorial(int n) {
+  /*  public static long getFactorial(int n) {
         long product = n; //tích ban đầu = 1
         if(n < 0 || n >20) 
             throw new IllegalArgumentException("Invalid n, n must be between 0 - 20");
@@ -29,6 +29,17 @@ public class MathUtility {
             product *= i;
         
         return product;
+    }*/
+    public static long getFactorial(int n) {
+      
+        if(n < 0 || n >20) 
+            throw new IllegalArgumentException("Invalid n, n must be between 0 - 20");
+        
+        if(n == 0 || n == 1) {
+            return 1;
+        }
+        
+        return n * getFactorial(n - 1);
     }
 }
     //return sớm để hàm ko báo lỗi
